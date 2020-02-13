@@ -1,6 +1,105 @@
 /* This is an example of using Sass, otherwise plain CSS works too*/
-$primary-background: pink;
+$primary-color: #F4BA00;
+$secondary-color: #DE3400;
+$thirdary-color: rgb(91, 155, 255);
 
 body {
-  background-color: $primary-background;
+  background-color: white;
+  height: 100vh;
+  margin: 0;
+}
+
+.main-title {
+  text-shadow: 0 0 1px #000;
+  color: $primary-color;
+}
+
+.header {
+  margin: 0;
+  color: #F4BA00;
+  display: flex;
+  justify-content: center;
+  background-color: #5B9BFF;
+  height: 10vh;
+  width: 100vw;
+}
+
+.options-container {
+  margin: 0 0 0 2%;
+}
+
+.title {
+  text-shadow: 0 0 1px #000;
+  color: black;
+}
+
+.clothing-btn {
+  box-shadow: 0 8px 6px -6px $thirdary-color;
+  height: 30px;
+  width: 62px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+.clothing-btn:hover {
+  animation: shadow-inset-center 0.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+.main-content {
+  height: 90vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: .8fr 1.2fr .8fr;
+}
+
+.bear-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.build-a-bear {
+  margin: 2% 0 0 0;
+  border: #DE3400 solid 3px;
+  height: 80%;
+  width: 80%;
+}
+
+.outfit-container {
+  display: flex;
+  justify-content: center;
+}
+
+.outfit-input {
+  margin: 2% 0 0 0;
+  height: 30px;
+  width: 30%;
+  border-radius: 3px;
+  font-size: 1em;
+}
+
+.save-btn {
+  margin: 2% 0 0 0;
+  box-shadow: 0 8px 6px -6px $thirdary-color;
+  height: 30px;
+  width: 20%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bolder;
+}
+
+
+.save-btn:hover {
+  animation: shadow-inset-center 0.25s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes shadow-inset-center {
+  0% {
+    box-shadow: inset 0 0 0 0 $thirdary-color;
+  }
+  100% {
+    box-shadow: inset 0 0 20px 0px $thirdary-color;
+  }
 }
